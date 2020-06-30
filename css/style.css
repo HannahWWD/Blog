@@ -1,0 +1,14 @@
+@import url(./design-system.css);
+@import url(./layout.css);
+
+
+/* remove default margin and padding */
+*{
+margin:0;
+padding:0px;
+}
+
+
+body{
+    padding:3vw;
+}
