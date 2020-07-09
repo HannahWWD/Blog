@@ -1,3 +1,5 @@
+/* reference: https://www.w3schools.com/css/css_navbar_horizontal.asp */
+
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function handleClicked() {
   var elem = document.getElementById("myTopnav");
