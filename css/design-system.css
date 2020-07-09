@@ -1,5 +1,25 @@
-/* typography */
+/* styles */
 
+/* section title */
+.section-title {
+    box-sizing      : border-box;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 20vw;
+    background-color: #FDB096;
+    height          : 62px;
+    text-align      : center;
+    color           : #fff;
+    margin-bottom   : 2vw;
+}
+
+.orange {
+    background-color: #ffba02;
+    margin-top      : 2vw;
+}
+
+/* typography style */
 body {
     font: normal 16px/2 "Open Sans", "Helvetica", "Arial";
 }
@@ -8,7 +28,6 @@ a {
     text-decoration: none;
     color          : #000;
 }
-
 
 h2,
 h3,
@@ -75,7 +94,6 @@ h5 {
 
 
 /* colors */
-
 #color-group div:nth-child(1) {
     background-color: #fdb096;
 }
@@ -97,8 +115,6 @@ h5 {
 }
 
 /* button style */
-
-
 .outline {
     color                : #ffba02;
     padding              : 6px 20px;
@@ -143,7 +159,7 @@ h5 {
     padding         : 1vw 2vw;
     margin-bottom   : 1vw;
     border          : 1px solid #9c9c9c;
-    text-align: center;
+    text-align      : center;
 }
 
 .inputbox::placeholder {
@@ -162,11 +178,12 @@ h5 {
     color: #9c9c9c;
 }
 
-/* card: content card */
+/* cards */
 
+/* card: content card */
 .content-card {
-    display: block;
-    width  : 100%;
+    display      : block;
+    width        : 100%;
     margin-bottom: 40px;
 }
 
@@ -174,7 +191,6 @@ h5 {
     width     : 100%;
     height    : 25vw;
     object-fit: cover;
-
 }
 
 .content-card .body-text2 {
@@ -183,7 +199,7 @@ h5 {
 }
 
 .content-card h3 {
-    display:block;
+    display       : block;
     padding-bottom: 0.5em;
 }
 
@@ -192,14 +208,13 @@ h5 {
 }
 
 /* card: feature article card */
-
 .feature-article {
     display              : grid;
     grid-template-columns: 15% auto;
     grid-gap             : 1vw;
     grid-template-rows   : repeat(2, auto);
     grid-template-areas  : "num title""num time";
-    margin:5vw 0;
+    margin               : 5vw 0;
 
 }
 
@@ -209,7 +224,7 @@ h5 {
 }
 
 .feature-article h4 {
-    display:block;
+    display  : block;
     grid-area: title;
 
 }
@@ -220,16 +235,15 @@ h5 {
 }
 
 /* card: author brief card */
-
 .author-brief {
     box-sizing           : border-box;
     display              : grid;
     grid-template-columns: 80px auto 15%;
     grid-template-rows   : repeat(2, auto);
     grid-column-gap      : 2vw;
-    padding         : 10px 2vw;
-    margin-bottom:30px;
-    border-top: 1px solid #9c9c9c;
+    padding              : 10px 2vw;
+    margin-bottom        : 30px;
+    border-top           : 1px solid #9c9c9c;
     grid-template-areas  :
         "avatar card-text social"
         "avatar card-text button";
@@ -246,7 +260,7 @@ h5 {
     -moz-border-radius   : 50%;
     -ms-border-radius    : 50%;
     -o-border-radius     : 50%;
-    object-fit: cover;
+    object-fit           : cover;
     grid-area            : avatar;
 }
 
@@ -268,22 +282,18 @@ h5 {
     line-height: 1;
 }
 
-
-
-
 .author-brief button {
-
-    box-sizing: content-box;
-    align-self: start;
-    grid-area : button;
+    box-sizing  : content-box;
+    align-self  : start;
+    grid-area   : button;
     justify-self: center;
 }
 
 /* card: author detailed card (based on .author-brief */
 .author-detailed {
     grid-template-columns: 120px auto 15%;
-    border-top: 1px solid #9c9c9c;
-    padding-top: 2.4em;
+    border-top           : 1px solid #9c9c9c;
+    padding-top          : 2.4em;
 }
 
 .author-detailed img {
@@ -309,54 +319,70 @@ h5 {
 }
 
 .image-diaplay-grid {
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 20px;
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap             : 20px;
 }
 
-.image-diaplay-grid img{
-    width:100%;
-    height:250px;
+.image-diaplay-grid img {
+    width     : 100%;
+    height    : 250px;
     object-fit: cover;
-    
+
 }
 
+/* pad */
 @media only screen and (max-width:1200px) {
+    /* pad section title */
+    .section-title {
+        width: 100%;
+    }
+
+    /* pad card style */
     .content-card img {
-        height:40vw;
+        height: 40vw;
     }
 
     .feature-article {
-        grid-gap:1em;
+        grid-gap             : 1em;
         grid-template-columns: 10% auto;
-    } 
+    }
 
     .author-detailed {
         grid-template-columns: 120px auto;
         grid-template-areas  :
-        "avatar card-text"
-        "social button";
+            "avatar card-text"
+            "social button";
         grid-column-gap: 3em;
-        grid-row-gap: 1em;
+        grid-row-gap   : 1em;
     }
+
     .author-detailed button {
         justify-self: left;
     }
 
     .image-diaplay-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
+/* phone */
 @media only screen and (max-width:760px) {
+
+    /* phone section title */
+    .section-title {
+        margin-bottom: 6vw;
+    }
+
+    /* phone typo */
     h1 {
-        font-size: 4.5em;
-        hyphens: auto;
+        font-size      : 4.5em;
+        hyphens        : auto;
         -webkit-hyphens: auto;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-}
+        -moz-hyphens   : auto;
+        -ms-hyphens    : auto;
+    }
 
     h2,
     h3 {
@@ -372,32 +398,34 @@ h5 {
         font-size: 3em;
     }
 
+
+    /* phone card */
     .feature-article {
-        grid-gap:1em;
+        grid-gap             : 1em;
         grid-template-columns: 15% auto;
-    } 
+    }
 
     .author-brief {
-    box-sizing: border-box;
-    grid-template-columns: 80px auto 1fr;
-    grid-template-rows   : repeat(2, auto);
-    grid-column-gap      : 2vw;
-    grid-row-gap: 10px;
-    padding-left         : 2vw;
-    grid-template-areas  :
-        "avatar card-text card-text"
-        "avatar social button";
+        box-sizing           : border-box;
+        grid-template-columns: 80px auto 1fr;
+        grid-template-rows   : repeat(2, auto);
+        grid-column-gap      : 2vw;
+        grid-row-gap         : 10px;
+        padding-left         : 2vw;
+        grid-template-areas  :
+            "avatar card-text card-text"
+            "avatar social button";
 
     }
 
     .author-brief img {
-        width:59px;
-        height:59px;
+        width : 59px;
+        height: 59px;
     }
 
     .social {
         justify-self: left;
-        align-self: center;
+        align-self  : center;
     }
 
     .social a {
@@ -412,32 +440,31 @@ h5 {
         grid-template-columns: auto auto;
         grid-template-rows   : repeat(3, auto);
         grid-template-areas  :
-        "avatar avatar"
-        "card-text card-text"
-        "social button";
-        grid-column-gap:2em;
-
+            "avatar avatar"
+            "card-text card-text"
+            "social button";
+        grid-column-gap: 2em;
     }
 
-    .author-detailed img{
-        width: 80px;
-        height: 80px;
+    .author-detailed img {
+        width       : 80px;
+        height      : 80px;
         justify-self: center;
     }
 
     .detail-text {
-        display:block;
+        display: block;
     }
 
     .detail-text h5,
     .detail-text p:first-of-type {
-        text-align: center;
+        text-align : center;
         padding-top: 0.5em;
     }
 
     .detail-text p:last-of-type {
-        text-align: justify;
-        padding-top:1em;
+        text-align : justify;
+        padding-top: 1em;
     }
 
     .author-detailed .social {
